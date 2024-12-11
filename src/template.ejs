@@ -141,6 +141,59 @@
       &nbsp; K6 Load Test: <%= title %>
     </h1>
 
+    <!-- Custom Data Section -->
+    <% if (data.custom) { %>
+      <div class="custom-data-section">
+        <h2>Custom Data</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if (data.custom.firstTraceId) { %>
+              <tr>
+                <td>First Trace ID</td>
+                <td><%= data.custom.firstTraceId %></td>
+              </tr>
+            <% } %>
+            <% if (data.custom.lastTraceId) { %>
+              <tr>
+                <td>Last Trace ID</td>
+                <td><%= data.custom.lastTraceId %></td>
+              </tr>
+            <% } %>
+            <% if (data.custom.firstRequestId) { %>
+              <tr>
+                <td>First Request ID</td>
+                <td><%= data.custom.firstRequestId %></td>
+              </tr>
+            <% } %>
+            <% if (data.custom.lastRequestId) { %>
+              <tr>
+                <td>Last Request ID</td>
+                <td><%= data.custom.lastRequestId %></td>
+              </tr>
+            <% } %>
+            <% if (data.custom.firstRequestUTC) { %>
+              <tr>
+                <td>First Request Time (UTC)</td>
+                <td><%= data.custom.firstRequestUTC %></td>
+              </tr>
+            <% } %>
+            <% if (data.custom.lastRequestUTC) { %>
+              <tr>
+                <td>Last Request Time (UTC)</td>
+                <td><%= data.custom.lastRequestUTC %></td>
+              </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+    <% } %>
+
     <div class="row">
       <div class="box">
         <i class="fas fa-globe icon"></i>
