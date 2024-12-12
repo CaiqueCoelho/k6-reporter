@@ -1,8 +1,3 @@
-//
-// Generate HTML report from K6 summary data
-// Ben Coleman, March 2021
-//
-
 // Have to import ejs this way, nothing else works
 import ejs from '../node_modules/ejs/ejs.min.js'
 import template from './template.ejs'
